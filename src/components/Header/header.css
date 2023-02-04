@@ -1,0 +1,27 @@
+header {
+    padding: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.links {
+    display: flex;
+    column-gap: 45px;
+}
+
+.links a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.basket {
+    display: flex;
+    column-gap: 67px;
+    align-items: center;
+}
+
