@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .cards {
     display: flex;
     margin: 0 auto;
@@ -15,6 +20,7 @@
     width: 30%;
     height: auto;
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid black;
 }
 
