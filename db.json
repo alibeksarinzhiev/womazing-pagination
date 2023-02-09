@@ -32,6 +32,23 @@
       "title": "Jacet",
       "price": "330",
       "id": 6
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "12345678",
+      "id": 7
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "test@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "email": "tes1t@gmail.com",
+      "password": "12345678",
+      "id": 2
     }
   ]
 }

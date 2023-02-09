@@ -26,6 +26,7 @@ const Header = () => {
                     <Link to="">О бренде</Link>
                     <Link to="">Контакты</Link>
                     <Link to="/create">Создать</Link>
+                    <Link to="/regis">Регистрация</Link>
                 </div>
                 <div className="basket">
                     <p><span><img src="" alt="" /></span> +7 (495) 823-54-12</p>
