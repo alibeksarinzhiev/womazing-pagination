@@ -20,8 +20,15 @@
     width: 30%;
     height: auto;
     padding: 10px;
+    color: black;
+    transition: 0.5s;
     margin-bottom: 20px;
+    text-decoration: none;
     border: 1px solid black;
+}
+
+.card:hover {
+    transform: translate(2px, 2px);
 }
 
 .card img {

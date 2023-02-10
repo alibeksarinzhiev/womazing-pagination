@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import './shoppage.css'
 
@@ -18,7 +19,13 @@ const ShopPage = () => {
         <div className='shop__wrapper'>
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards">
-                {data.map(item => <Card title={item.title} price={item.price} img={item.img} key={item.id} />)}
+                {data.map(item =>
+                (
+                    <Link className='card' to={`/product/${item.id}`}>
+                        <Card title={item.title} price={item.price} img={item.img} key={item.id} />
+                    </Link>
+                )
+                )}
             </div>
         </div>
     );
