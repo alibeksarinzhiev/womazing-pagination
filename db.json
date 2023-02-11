@@ -2,42 +2,24 @@
   "posts": [
     {
       "id": 1,
-      "title": "Футболка USA",
+      "title": "Футболка 1",
       "price": 229,
       "img": "./images/img1.png"
     },
     {
       "id": 2,
-      "title": "Футболка USA",
-      "price": 229,
+      "title": "Футболка 2",
+      "price": 109,
       "img": "./images/img1.png"
     },
     {
       "id": 3,
-      "title": "Футболка USA",
-      "price": 229,
+      "title": "Футболка 3 ",
+      "price": 249,
       "img": "./images/img1.png"
-    },
-    {
-      "title": "Bag",
-      "price": "120",
-      "id": 4
-    },
-    {
-      "title": "dawdawd",
-      "price": 0,
-      "id": 5
-    },
-    {
-      "title": "Jacet",
-      "price": "330",
-      "id": 6
-    },
-    {
-      "email": "test@gmail.com",
-      "password": "12345678",
-      "id": 7
     }
+    
+    
   ],
   "user": [
     {

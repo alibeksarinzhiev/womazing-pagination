@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Basket from './components/Basket/Basket';
 import Header from './components/Header/Header';
 import CreateCard from './pages/CreateCard/CreateCard';
 import HomePage from './pages/HomePage/HomePage';
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/create' element={<CreateCard />} />
         <Route path='/reg' element={<RegisterPage />} />
         <Route path='/product/:id' element={<SinglePage />} />
+        <Route path='/basket' element={<Basket/>} />
       </Routes>
     </div>
   );
