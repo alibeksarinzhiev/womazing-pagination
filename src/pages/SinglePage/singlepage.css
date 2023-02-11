@@ -1,0 +1,28 @@
+.single__card {
+    display: flex;
+    column-gap: 74px;
+    justify-content: center;
+}
+
+.card__img {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card__img img {
+    width: 60%;
+    display: block;
+}
+
+.card__descr {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: left;
+}
+

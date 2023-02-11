@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import SingleCard from '../../components/SingleCard/SingleCard';
+import './singlepage.css'
 
 const SinglePage = () => {
 
@@ -14,11 +16,9 @@ const SinglePage = () => {
     }, [])
 
     return (
-        <div>
-            <img src={product.img} alt="" />
-            <h1>{product.title}</h1>
-            <h2>{product.price}</h2>
-        </div>
+        <>
+            <SingleCard title={product.title} price={product.price} img={`.${product.img}`} key={product.id} />    
+        </>
     );
 };
 
