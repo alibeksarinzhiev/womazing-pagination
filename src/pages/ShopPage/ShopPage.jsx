@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import './shoppage.css'
+import productServices from '../../servicese/product';
 
 const ShopPage = () => {
 
@@ -11,7 +12,8 @@ const ShopPage = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get(URL)
+        productServices
+            .getProducts()
             .then(res => setData(res.data))
     }, [])
 

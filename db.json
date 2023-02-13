@@ -1,26 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "Футболка 1",
-      "price": 229,
-      "img": "./images/img1.png"
-    },
-    {
-      "id": 2,
-      "title": "Футболка 2",
-      "price": 109,
-      "img": "./images/img1.png"
-    },
-    {
-      "id": 3,
-      "title": "Футболка 3 ",
-      "price": 249,
-      "img": "./images/img1.png"
-    }
-    
-    
-  ],
+  "posts": [],
   "user": [
     {
       "id": 1,
