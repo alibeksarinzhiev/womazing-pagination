@@ -14,7 +14,7 @@ const Basket = () => {
                     <li>Всего</li>
                 </ul>
                 <h2>
-                {basket.reduce((acc, el) => acc + el.price, 0)}
+                {/* {basket.reduce((acc, el) => acc + el.price, 0)} */}
                 </h2>
                 {basket.map(el=>(
                     <div>

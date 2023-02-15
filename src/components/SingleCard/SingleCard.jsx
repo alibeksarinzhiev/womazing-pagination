@@ -25,9 +25,15 @@ const SingleCard = ({ title, price, img }) => {
             </div>
             <div className="card__descr">
                 <h1>{title}</h1>
-                <h1>{price}</h1>
+                <h1>{price} $</h1>
+                <Button
+                variant="contained" 
+                onClick={deleteHandler}
+                style={{background: "red"}}
+                >
+                    <Link to="/shop" style={{textDecoration: "none", color: "white"}}>DELETE</Link>
+                </Button>
             </div>
-            <Button onClick={deleteHandler}><Link to="/shop">DELETE</Link></Button>
         </div>
     );
 };

@@ -17,7 +17,7 @@ const SinglePage = () => {
 
     return (
         <>
-            <SingleCard title={product.title} price={product.price} img={`.${product.img}`} key={product.id} />    
+            <SingleCard title={product.title} price={product.price} img={product.img} key={product.id} />    
         </>
     );
 };

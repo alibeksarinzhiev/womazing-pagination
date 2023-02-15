@@ -1,5 +1,25 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "dwadaw",
+      "price": "21345",
+      "category": "Свитшот",
+      "img": "",
+      "id": 1
+    },
+    {
+      "title": "",
+      "category": "",
+      "img": "",
+      "id": 2
+    },
+    {
+      "title": "dwadaw",
+      "category": "",
+      "img": "",
+      "id": 3
+    }
+  ],
   "user": [
     {
       "id": 1,

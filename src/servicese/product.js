@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import axios from 'axios';
 
 const URL = 'http://localhost:3004/posts';
