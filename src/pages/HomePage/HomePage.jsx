@@ -1,5 +1,7 @@
+
 import React, { useContext } from 'react';
 import { CustomContext } from '../../utils/Context';
+import Card from '../../components/Card/Card';
 
 const HomePage = () => {
     const { clothes, addBasket } = useContext(CustomContext)
@@ -8,14 +10,7 @@ const HomePage = () => {
             <div className='cards'>
                 {
                     clothes.map(el => (
-                        <div className='card'>
-                            <h2>{el.title}</h2>
-                            <img src={el.img} alt={el.title} />
-                            <p>{el.price}</p>
-                            <button onClick={() => addBasket(el)}>В корзину</button>
-
-
-                        </div>
+                        <Card item={el}/>
                     ))
                 }
             </div>

@@ -2,22 +2,31 @@
   "posts": [
     {
       "title": "dwadaw",
-      "price": "21345",
-      "category": "Свитшот",
-      "img": "",
+      "price": "300",
+      "category": "свитшот",
+      "img": "./images/img1.png",
       "id": 1
     },
     {
-      "title": "",
-      "category": "",
-      "img": "",
-      "id": 2
+      "title": "qwerty",
+      "category": "пальто",
+      "img": "./images/img1.png",
+      "id": 2,
+      "price": "300"
     },
     {
-      "title": "dwadaw",
-      "category": "",
-      "img": "",
-      "id": 3
+      "title": "asdf",
+      "category": "кардиган",
+      "img": "./images/img1.png",
+      "id": 3,
+      "price": 200
+    },
+    {
+      "title": "zxcv",
+      "category": "толстовка",
+      "img": "./images/img1.png",
+      "id": 4,
+      "price": 500
     }
   ],
   "user": [
@@ -30,6 +39,11 @@
       "email": "tes1t@gmail.com",
       "password": "12345678",
       "id": 2
+    },
+    {
+      "email": "alibek@mail.ru",
+      "password": "alibek1234",
+      "id": 3
     }
   ]
 }

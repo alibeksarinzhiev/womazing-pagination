@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+import { CustomContext } from '../../utils/Context';
 
-const Card = ({ img, title, price }) => {
+const Card = ({item}) => {
+    const {addBasket,basket,plusBasket,minusBasket} = useContext(CustomContext)
+    
 
     return (
-        <>
-            <img src={img} alt="" />
-            <p>{title}</p>
-            <p>{price}$</p>
-        </>
+        <div className='card'>
+            
+            <img src={item.img} alt="" />
+            
+            <p>{item.title}</p>
+            <p>{item.price}$</p>
+
+            {basket.findIndex(product=>product.id === item.id) > -1
+          
+            ?   <div>
+            <button type='button' onClick={()=>plusBasket(item.id)}>+</button>    
+            <button type='button' onClick={()=>minusBasket(item.id)}>-</button> 
+            <div className='count'>
+                {basket.find(product=>product.id === item.id).count}
+            </div>
+            </div>
+            :<button onClick={()=>addBasket(item)} type='button'>В корзину</button>
+            }
+            
+        </div>
     );
 };
 

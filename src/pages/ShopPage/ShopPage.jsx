@@ -1,31 +1,40 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 import './shoppage.css'
 import productServices from '../../servicese/product';
+import { CustomContext } from '../../utils/Context';
 
 const ShopPage = () => {
 
-    const URL = "http://localhost:3004/posts"
-
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        productServices
-            .getProducts()
-            .then(res => setData(res.data))
-    }, [])
+    const {clothes} = useContext(CustomContext)
+    const [status,setStatus]=useState('all')
+   
 
     return (
         <div className='shop__wrapper'>
+
+
+            <ul className='shop__lists'>
+                <li className={`${status === 'all' && 'active'}`} onClick={()=>setStatus('all')}>Все</li>
+                <li className={`${status === 'пальто' && 'active'}`} onClick={()=>setStatus('пальто')}>Пальто</li>
+                <li className={`${status === 'свитшот' && 'active'}`} onClick={()=>setStatus('свитшот')}>Свитшоты</li>
+                <li className={`${status === 'кардиган' && 'active'}`} onClick={()=>setStatus('кардиган')}>Кардиганы</li>
+                <li className={`${status === 'толстовка' && 'active'}`} onClick={()=>setStatus('толстовка')}>Толстовки</li>
+            </ul>
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards">
-                {data.map(item =>
+                {clothes.filter((item)=>{
+                    if(status==='all'){
+                        return item
+                    } else{
+                        return item.category === status
+                    }
+                    
+                }).map(item =>
                 (
-                    <Link className='card' to={`/product/${item.id}`}>
-                        <Card title={item.title} price={item.price} img={item.img} key={item.id} />
-                    </Link>
+                <Card item={item} key={item.id} />
                 )
                 )}
             </div>

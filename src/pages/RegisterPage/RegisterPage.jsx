@@ -18,6 +18,7 @@ const RegisterPage = () => {
         axios
             .post('http://localhost:3004/user', newUser)
             .then(res => console.log(res.data))
+            
             .catch(err => console.log(err))
     }
 
