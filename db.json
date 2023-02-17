@@ -1,32 +1,25 @@
 {
   "posts": [
     {
-      "title": "dwadaw",
-      "price": "300",
-      "category": "свитшот",
+      "title": "Футболка USA ",
+      "price": "250",
+      "category": "Свитшоты",
       "img": "./images/img1.png",
       "id": 1
     },
     {
-      "title": "qwerty",
-      "category": "пальто",
-      "img": "./images/img1.png",
-      "id": 2,
-      "price": "300"
+      "title": "Футболка KGZ",
+      "price": "245",
+      "category": "Кардиганы",
+      "img": "./images/img2.png",
+      "id": 2
     },
     {
-      "title": "asdf",
-      "category": "кардиган",
-      "img": "./images/img1.png",
-      "id": 3,
-      "price": 200
-    },
-    {
-      "title": "zxcv",
-      "category": "толстовка",
-      "img": "./images/img1.png",
-      "id": 4,
-      "price": 500
+      "title": "Футболка KZ",
+      "price": "244",
+      "category": "Свитшоты",
+      "img": "./images/img3.png",
+      "id": 3
     }
   ],
   "user": [
@@ -44,6 +37,38 @@
       "email": "alibek@mail.ru",
       "password": "alibek1234",
       "id": 3
+    },
+    {
+      "email": "test22@gmail.com",
+      "password": "12345678",
+      "id": 4
+    },
+    {
+      "email": "test1234@gmail.com",
+      "password": "12345678",
+      "id": 5
+    },
+    {
+      "email": "test123455@gmail.com",
+      "password": "12345678",
+      "id": 6
+    },
+    {
+      "email": "test23456@gmail.com",
+      "password": "12345678",
+      "id": 7
+    },
+    {
+      "email": "test2223@gmail.com",
+      "login": "TEST AKRAM",
+      "password": "12345678",
+      "id": 8
+    },
+    {
+      "email": "test2223@gmail.com",
+      "login": "TEST AKRAM",
+      "password": "1234567",
+      "id": 9
     }
   ]
 }

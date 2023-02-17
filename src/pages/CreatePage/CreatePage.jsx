@@ -1,5 +1,4 @@
 import { Button, TextField } from '@mui/material';
-import axios from 'axios';
 import React, { useState } from 'react';
 import './create.css'
 import productServices from '../../servicese/product';
@@ -8,19 +7,22 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import { useNavigate } from 'react-router-dom';
 
 const CreateCard = () => {
 
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState()
     const [img, setImg] = useState("")
-    const [err, setErr] = useState("")
+    const [open, setOpen] = useState(false);
     const [category, setCategory] = useState('');
+    const navigate = useNavigate()
 
-    // const handleChange = (e) => {
-    //     console.log(e.target.value)
-    //     setTitle(e.target.value)
-    // }
+    const handleClouse = () => {
+        setOpen(false)
+    }
 
     const addCard = (e) => {
         e.preventDefault()
@@ -36,15 +38,17 @@ const CreateCard = () => {
                 setPrice("")
                 setTitle("")
                 setImg("")
+                setCategory("")
+                setOpen(true)
+                navigate("/shop")
             })
+            .catch(err => console.log(err))
     }
     return (
         <>
             <form onSubmit={addCard}>
 
                 <h1>Create Product</h1>
-
-                {err && <p style={{ color: "red" }}>{err}, перейдите в консоль</p>}
 
                 <TextField
                     value={title}
@@ -71,7 +75,7 @@ const CreateCard = () => {
                     id='outlined-basic'
                     variant="outlined" />
 
-                <Box sx={{ minWidth: 120 }} style={{marginTop: "20px"}}>
+                <Box sx={{ minWidth: 120 }} style={{ marginTop: "20px" }}>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Категория</InputLabel>
                         <Select
@@ -81,16 +85,23 @@ const CreateCard = () => {
                             label="Category"
                             onChange={(e) => setCategory(e.target.value)}
                         >
-                            <MenuItem value={"Футболка"}>Футболка</MenuItem>
-                            <MenuItem value={"Купальник"}>Купальник</MenuItem>
-                            <MenuItem value={"Свитшот"}>Свитшот</MenuItem>
+                            <MenuItem value={"Пальто"}>Пальто</MenuItem>
+                            <MenuItem value={"Свитшоты"}>Свитшоты</MenuItem>
+                            <MenuItem value={"Кардиганы"}>Кардиганы</MenuItem>
+                            <MenuItem value={"Толстовки"}>Толстовки</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
 
                 <Button variant="contained" type='submit' style={{ marginTop: "20px" }}>Отправить</Button>
             </form>
+            <Snackbar open={open} autoHideDuration={4000} onClose={handleClouse}>
+                <Alert severity="success" sx={{ width: '100%' }}>
+                    Продукт создан!
+                </Alert>
+            </Snackbar>
         </>
+
     );
 };
 

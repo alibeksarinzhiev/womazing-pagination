@@ -2,18 +2,22 @@ import React from 'react';
 import productService from "../../servicese/product"
 import axios from 'axios';
 import { Button } from '@mui/material';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 
 const SingleCard = ({ title, price, img }) => {
 
     const { id } = useParams();
 
-    const deleteHandler = () => {
+    const navigate = useNavigate()
+
+    const deleteHandler = (e) => {
+        e.preventDefault()
         axios.delete(`http://localhost:3004/posts/${id}`)
             .then(res => {
-                console.log(res);
+                navigate("/shop")
             })
+            .catch(err => console.log(err)) 
     }
 
 
@@ -31,7 +35,7 @@ const SingleCard = ({ title, price, img }) => {
                 onClick={deleteHandler}
                 style={{background: "red"}}
                 >
-                    <Link to="/shop" style={{textDecoration: "none", color: "white"}}>DELETE</Link>
+                    DELETE
                 </Button>
             </div>
         </div>

@@ -7,5 +7,35 @@
 .basket__card{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
+}
+
+ul {
+    list-style: none;
+}
+
+ul div {
+    margin-top: 200px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.basket_text {
+    font-size: 25px;
+}
+
+.buttons {
+    display: flex;
+    color: white;
+    column-gap: 10px;
+}
+
+.buttons button {
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    background-color: black;
+    border-radius: 8px;
 }

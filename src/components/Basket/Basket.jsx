@@ -3,35 +3,49 @@ import { CustomContext } from '../../utils/Context';
 import './basket.css'
 
 const Basket = () => {
-    const {basket,plusBasket,minusBasket} = useContext(CustomContext)
+    const { basket, plusBasket, minusBasket } = useContext(CustomContext)
     return (
         <section>
             <div className="container">
-                <ul className='basket__lists'>
-                    <li>товар</li>
-                    <li>цена</li>
-                    <li>кол-во</li>
-                    <li>Всего</li>
-                </ul>
-                
-                {basket.map(el=>(
+
+                {basket.map(el => (
                     <div className='basket__card'>
-                        <div>
-                        <img src={el.img} alt="" />
-                        <h2>{el.title}</h2>
-                        </div>
-                        <p>{el.price}</p>
-                        <p> <button onClick={()=>minusBasket(el.id)} type='button'>-</button>
-                            
-                            {el.count}</p>
-                            <button onClick={()=>plusBasket(el.id)} type='button'>+</button>
-                        <p>{el.price * el.count}</p>
+                        <ul>
+                            <li>Товар</li>
+
+                            <img src={el.img} alt="" />
+                            <h2>{el.title}</h2>
+
+                        </ul>
+                        <ul>
+                            <li>Цена</li>
+                            <div className="price__wrapper">
+                                <p className='basket_text'>{el.price}</p>
+                            </div>
+                        </ul>
+                        <ul>
+                            <li>Количество</li>
+                            <div className="count__wrapper">
+                                <p className='basket_text'>{el.count}</p>
+                            </div>
+                            <div className="buttons">
+                                <button onClick={() => plusBasket(el.id)} type='button'>+</button>
+                                <button onClick={() => minusBasket(el.id)} type='button'>-</button>
+                            </div>
+                        </ul>
+
+                        <ul>
+                            <li>Всего</li>
+                            <div className="total__wraper">
+                                <p className='basket_text'>{el.price * el.count}</p>
+                            </div>
+                        </ul>
                     </div>
                 ))}
-                <h2>
-                {basket.reduce((acc, el) => acc + +el.price, 0)}
-                </h2>
-              
+
+                {/* <h2>
+                    {basket.reduce((acc, el) => acc + +el.price, 0)}
+                </h2> */}
 
             </div>
         </section>

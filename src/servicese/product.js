@@ -7,12 +7,8 @@ const getProducts = () => {
 }
 
 const createProduct = (newPost) => {
-    axios.post(URL, newPost)
-}
-
-const deleteProduct = () => {
-    axios.post(URL)
+    return axios.post(URL, newPost)
 }
 
 
-export default { getProducts, createProduct, deleteProduct }
+export default { getProducts, createProduct }

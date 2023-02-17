@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Basket from './components/Basket/Basket';
 import Header from './components/Header/Header';
+import AboutBrand from './pages/AboutBrand/AboutBrand';
+import Contact from './pages/Contact/Contact';
 import CreatePage from './pages/CreatePage/CreatePage';
 import HomePage from './pages/HomePage/HomePage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
@@ -17,7 +19,9 @@ const App = () => {
         <Route path='/shop' element={<ShopPage />} />
         <Route path='/create' element={<CreatePage />} />
         <Route path='/reg' element={<RegisterPage />} />
-        <Route path='/product/:id' element={<SinglePage to='/shop' />} />
+        <Route path='/about' element={<AboutBrand />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/product/:id' element={<SinglePage />} />
         <Route path='/basket' element={<Basket/>} />
       </Routes>
     </div>
