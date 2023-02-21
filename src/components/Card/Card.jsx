@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import axios from 'axios';
+import './Card.css'
+
 import { Link, useParams } from 'react-router-dom';
 import { CustomContext } from '../../utils/Context';
 
@@ -22,7 +23,12 @@ const Card = ({ item }) => {
                     <button type='button' onClick={() => plusBasket(item.id)}>+</button>
                     <button type='button' onClick={() => minusBasket(item.id)}>-</button>
                     <div className='count'>
-                        {basket.find(product => product.id === item.id).count}
+
+                            {basket.find(product => product.id === item.id).count >9
+                                ? '9+'
+                                :basket.find(product => product.id === item.id).count
+                            }
+
                     </div>
                 </div>
                 : <button onClick={() => addBasket(item)} type='button'>В корзину</button>

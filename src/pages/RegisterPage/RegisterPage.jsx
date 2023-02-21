@@ -5,7 +5,6 @@ import './registerpage.css'
 import axios from 'axios';
 
 const RegisterPage = () => {
-
     const [user, setUser] = useState('')
     const [email, setEmail] = useState('')
     const [login, setLogin] = useState('')
@@ -23,7 +22,6 @@ const RegisterPage = () => {
             .then(res => setUser(res.data))
             .catch(err => console.log(err))
     }
-
     return (
         <div className='form__wrapper'>
             <form onSubmit={postRegister}>
